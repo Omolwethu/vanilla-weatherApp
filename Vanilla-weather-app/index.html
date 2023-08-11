@@ -3,10 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link rel="stylesheet" href="src/styles.css"/>
-    <title>Document</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>Weather App</title>
   </head>
   <body>
-    <script src ="src/app.js"></script>
+    <div class="container">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <form class="form-inline">
+            <input
+              class="form-control mr-mb-4"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success my-2 my-mb-4" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="src/app.js"></script>
   </body>
 </html>
