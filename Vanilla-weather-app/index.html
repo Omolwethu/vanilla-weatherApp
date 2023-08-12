@@ -25,7 +25,7 @@
             <div class="col-6">
               <input type="search" 
               placeholder="Search City" class="form-control" 
-              autocomplete="off">
+              autocomplete="off" id="city-input">
 
             </div>
             <div class=" col-3">
@@ -36,10 +36,10 @@
           </div>
           </form>
           <div class="info">
-            <h1>Tokyo</h1>
+            <h1 id="city">Tokyo</h1>
             <ul>
-              <li> Last updated:Friday 20:11</li>
-              <li>
+            <li> Last updated: <span id="date"></span></li>
+              <li id="explanation">
                 Clear skies
               </li>
             </ul>
@@ -47,11 +47,14 @@
             <div class="col-6">
               <div class=" clearfix weather-temp">
                 <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" alt="Clear"
-                class="float-left"/>
+                class="float-left" id="icon"/>
                 <div class="float-left">
-                  <strong>25</strong> 
+                  <strong id="temperature">25</strong> 
 
-                  <span class="units">℃ | ℉</span> 
+                  <span class="units">
+                    <a href="#" id="celsius-link">℃ </a> 
+                    | <a href="#" id="fahrenheit-link"> ℉ </a>
+                  </span> 
 
                 </div>
 
@@ -62,10 +65,10 @@
               <div class="float-left">
               <ul class="climate">
                 <li>
-                  Humidity:45%
+                  Humidity: <span id="humidity"></span>%
                 </li>
                 <li>
-                  Wind:25 km/h
+                  Wind: <span id="wind"></span> km/h
                 </li>
               </ul>
             </div>
