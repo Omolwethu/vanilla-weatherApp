@@ -37,14 +37,14 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
 
-  let celsiusTemperature = response.data.temp;
+  celsiusTemperature = response.data.temperature.current;
 
   cityElement.innerHTML = response.data.city;
-  dateElement.innerHTML = formateDate(response.data.dt * 1000);
+  dateElement.innerHTML = formateDate(response.data.time * 1000);
   descriptionElement.innerHTML = response.data.condition.description;
   iconElement.setAttribute(
     "src",
-    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.description}.png`
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
   iconElement.setAttribute("alt", response.data.condition.description);
   temperatureElement.innerHTML = Math.round(celsiusTemperature);

@@ -13,6 +13,7 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
    <link rel="stylesheet" href="src/styles.css">
     <title>Weather App</title>
   </head>
@@ -20,7 +21,7 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
-          <form  class="mb-3">
+          <form id="search-form" class="mb-3">
           <div class="row">
             <div class="col-6">
               <input type="search" 
@@ -39,7 +40,7 @@
             <h1 id="city">Tokyo</h1>
             <ul>
             <li> Last updated: <span id="date"></span></li>
-              <li id="explanation">
+              <li id="description">
                 Clear skies
               </li>
             </ul>
@@ -52,8 +53,9 @@
                   <strong id="temperature">25</strong> 
 
                   <span class="units">
-                    <a href="#" id="celsius-link">℃ </a> 
-                    | <a href="#" id="fahrenheit-link"> ℉ </a>
+                    <a href="#" id="celsius-link" class="active">℃ </a> 
+                    | 
+                    <a href="#" id="fahrenheit-link"> ℉ </a>
                   </span> 
 
                 </div>
@@ -78,7 +80,7 @@
         </div>
         </div>
         <small>
-        <a href="" target="_blank"> Open source code</a> by Olwethu Zulu
+        <a href="https://github.com/Omolwethu/vanilla-weatherApp" target="_blank"> Open source code</a> by Olwethu Zulu
         </small>
       </div>
       
